@@ -28,6 +28,44 @@
   color: #61dafb;
 }
 
+div {
+  padding: 1rem;
+}
+.content {
+  display: flex;
+}
+
+.content-section {
+  flex-grow: 1;
+}
+
+.navbar-nav li {
+  list-style: none;
+  float: left;
+  padding: 20px 10px;
+  font-size: 13px;
+  text-align: right;
+}
+.navigation-section {
+  padding: 0 1rem;
+}
+.navbar-nav li a {
+  color: #3c3d3d;
+  text-decoration: none;
+}
+.navbar-nav li a.active {
+  color: red;
+}
+.navbar-nav {
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+}
+
+.contentSection{
+  margin-bottom: 2rem;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
