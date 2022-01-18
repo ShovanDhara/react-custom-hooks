@@ -25,7 +25,7 @@ function Menu() {
 
     return (
         <div ref={menuRef}>
-            ..Click outside or insid hooks
+            ..Click outside or inside hooks
         </div>
     )
 }

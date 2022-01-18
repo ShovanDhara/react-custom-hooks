@@ -4,6 +4,7 @@ import { ThemeContext, themes } from './themeContext';
 import React from 'react';
 import { Routes, Route, NavLink } from "react-router-dom";
 import CustomHooks from './customhooks/hookComponent';
+import ListSearch from './listWithSearch/listsearchComponent';
 
 function App() {
   const theme = useDarkMode() ? themes.dark : themes.light
@@ -18,11 +19,15 @@ function App() {
               <li className="nav-item active">
                 <NavLink className="nav-link" className={({ isActive }) => isActive ? "active" : null} to='/hooks'>Custom Hooks</NavLink>
               </li>
+              <li className="nav-item active">
+                <NavLink className="nav-link" className={({ isActive }) => isActive ? "active" : null} to='/listwithsearch'>List with Search</NavLink>
+              </li>
             </ul>
           </section>
           <section className="content-section">
             <Routes>
               <Route path="/hooks" element={<CustomHooks />} />
+              <Route path="/listwithsearch" element={<ListSearch />} />
             </Routes>
           </section>
         </div>
