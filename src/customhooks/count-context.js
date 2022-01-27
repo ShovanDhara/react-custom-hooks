@@ -41,7 +41,7 @@ function useCount() {
 function useDispatch() {
     const context = React.useContext(DispatchContext)
     if (context === undefined) {
-        throw new Error('useDispatch must be used within a DispatchProvider')
+        throw new Error('useDispatch must be used within a CountProvider')
     }
     return context
 }
