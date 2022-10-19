@@ -6,10 +6,13 @@ import { Routes, Route, NavLink } from "react-router-dom";
 import CustomHooks from './customhooks/hookComponent';
 import ListSearch from './listWithSearch/listsearchComponent';
 import CompoundComponent from './compoundComponent/compoundComponent';
+import FastContext from './fastContext/index';
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   const theme = useDarkMode() ? themes.dark : themes.light
   return (
+    <BrowserRouter>
     <ThemeContext.Provider value={theme}>
       <div className="App">
         <h4 className="heading">Some cool React stuffs</h4>
@@ -25,6 +28,9 @@ function App() {
               <li className="nav-item active">
                 <NavLink className={`nav-link ${({ isActive }) => isActive ? "active" : null}`} to='/compoundcomponent'>Compound Components</NavLink>
               </li>
+              <li className="nav-item active">
+                <NavLink className={`nav-link ${({ isActive }) => isActive ? "active" : null}`} to='/fastContext'>Fast Context</NavLink>
+              </li>
             </ul>
           </section>
           <section className="content-section">
@@ -32,11 +38,13 @@ function App() {
               <Route path="/hooks" element={<CustomHooks />} />
               <Route path="/listwithsearch" element={<ListSearch />} />
               <Route path="/compoundcomponent" element={<CompoundComponent />} />
+              <Route path="/fastContext" element={<FastContext />} />
             </Routes>
           </section>
         </div>
       </div>
     </ThemeContext.Provider>
+    </BrowserRouter>
 
   );
 }
