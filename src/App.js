@@ -8,6 +8,7 @@ import ListSearch from './listWithSearch/listsearchComponent';
 import CompoundComponent from './compoundComponent/compoundComponent';
 import FastContext from './fastContext/index';
 import { BrowserRouter } from "react-router-dom";
+import Todo from "./todolist/App";
 
 function App() {
   const theme = useDarkMode() ? themes.dark : themes.light
@@ -31,6 +32,9 @@ function App() {
               <li className="nav-item active">
                 <NavLink className={`nav-link ${({ isActive }) => isActive ? "active" : null}`} to='/fastContext'>Fast Context</NavLink>
               </li>
+              <li className="nav-item active">
+                <NavLink className={`nav-link ${({ isActive }) => isActive ? "active" : null}`} to='/todolist'>Todo List</NavLink>
+              </li>
             </ul>
           </section>
           <section className="content-section">
@@ -39,6 +43,7 @@ function App() {
               <Route path="/listwithsearch" element={<ListSearch />} />
               <Route path="/compoundcomponent" element={<CompoundComponent />} />
               <Route path="/fastContext" element={<FastContext />} />
+              <Route path="/todolist" element={<Todo />} />
             </Routes>
           </section>
         </div>
