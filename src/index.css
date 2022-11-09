@@ -16,3 +16,7 @@ code {
   display: inline;
   margin: 0 10px;
 }
+
+.loading{
+  border: 10px solid red;
+}

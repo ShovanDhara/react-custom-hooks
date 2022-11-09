@@ -9,6 +9,7 @@ import CompoundComponent from './compoundComponent/compoundComponent';
 import FastContext from './fastContext/index';
 import { BrowserRouter } from "react-router-dom";
 import Todo from "./todolist/App";
+import DebounceSearch from "./searchWithDebounce/searchDebounce";
 
 function App() {
   const theme = useDarkMode() ? themes.dark : themes.light
@@ -35,6 +36,9 @@ function App() {
               <li className="nav-item active">
                 <NavLink className={`nav-link ${({ isActive }) => isActive ? "active" : null}`} to='/todolist'>Todo List</NavLink>
               </li>
+              <li className="nav-item active">
+                <NavLink className={`nav-link ${({ isActive }) => isActive ? "active" : null}`} to='/searchDebounce'>Search with Debounce</NavLink>
+              </li>
             </ul>
           </section>
           <section className="content-section">
@@ -44,6 +48,7 @@ function App() {
               <Route path="/compoundcomponent" element={<CompoundComponent />} />
               <Route path="/fastContext" element={<FastContext />} />
               <Route path="/todolist" element={<Todo />} />
+              <Route path="/searchDebounce" element={<DebounceSearch />} />
             </Routes>
           </section>
         </div>
