@@ -17,6 +17,10 @@ function ListSearch() {
     const filteredContacts = search.length === 0 ? items :
         items.filter(contact => contact.name.toLowerCase().includes(search.toLowerCase()))
 
+    if(!items.length){
+        return <h1>Loading....</h1>
+    }
+
     return (
         <div>
             <h3>CONTACTS LIST</h3>
