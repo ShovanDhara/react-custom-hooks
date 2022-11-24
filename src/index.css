@@ -17,6 +17,40 @@ code {
   margin: 0 10px;
 }
 
-.loading{
+.loading {
   border: 10px solid red;
+}
+.dataContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.post {
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.post small{
+  display: flex;
+  background: #ccc;
+  align-self: stretch;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+}
+.post h1{
+  font-size: 15px;
+}
+.post h1, .post p{
+  flex-grow: 1;
+}
+.post .post-data{
+  text-align: left;
+  background-color: bisque;
+}
+.pagination .active{
+  background-color: blue;
+  color: #fff;
 }

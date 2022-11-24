@@ -10,6 +10,8 @@ import FastContext from './fastContext/index';
 import { BrowserRouter } from "react-router-dom";
 import Todo from "./todolist/App";
 import DebounceSearch from "./searchWithDebounce/searchDebounce";
+import TableApp from './optimisedTable/export';
+import DataPagination from 'dataWithPagination/dataWithPagination';
 
 function App() {
   const theme = useDarkMode() ? themes.dark : themes.light
@@ -39,6 +41,12 @@ function App() {
               <li className="nav-item active">
                 <NavLink className={`nav-link ${({ isActive }) => isActive ? "active" : null}`} to='/searchDebounce'>Search with Debounce</NavLink>
               </li>
+              <li className="nav-item active">
+                <NavLink className={`nav-link ${({ isActive }) => isActive ? "active" : null}`} to='/table'>Table Select/Deselect All</NavLink>
+              </li>
+              <li className="nav-item active">
+                <NavLink className={`nav-link ${({ isActive }) => isActive ? "active" : null}`} to='/dataPagination'>Table Select/Deselect All</NavLink>
+              </li>
             </ul>
           </section>
           <section className="content-section">
@@ -49,6 +57,8 @@ function App() {
               <Route path="/fastContext" element={<FastContext />} />
               <Route path="/todolist" element={<Todo />} />
               <Route path="/searchDebounce" element={<DebounceSearch />} />
+              <Route path="/table" element={<TableApp />} />
+              <Route path="/dataPagination" element={<DataPagination />} />
             </Routes>
           </section>
         </div>
